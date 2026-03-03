@@ -11,17 +11,13 @@ public class TelcoAllowance implements UsagePromo {
     }
 
     @Override
-    public String showAllowance(TelcoSubscription subscription) {
-        Telco telco = (Telco) subscription;
-        String telcoName = telco.getTelcoName();
-        double promoPrice = telco.getPromoPrice();
-
+    public String showAllowance(String telcoName, double money) {
         Integer allowance = ALLOWANCE_MAP.get(telcoName);
 
         if (allowance == null) {
             return "Telco not supported.";
         }
 
-        return allowance + "GB for " + String.format("%.2f", promoPrice) + " PHP";
+        return allowance + "GB for " + String.format("%.2f", money) + " PHP";
     }
 }

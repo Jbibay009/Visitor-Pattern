@@ -13,13 +13,13 @@ public class Telco implements TelcoSubscription{
     }
 
     @Override
-    public String accept(UsagePromo promo){
-        return promo.showAllowance(this);
+    public String accept(UsagePromo promo, double price){
+        return promo.showAllowance(telcoName, price);
     }
 
     @Override
-    public String accept(UnliCallsTextOffer offer) {
-        return offer.showUnliCallsTextOffer(this);
+    public String accept(UnliCallsTextOffer offer, boolean unliCallText) {
+        return offer.showUnliCallsTextOffer(telcoName, unliCallText);
     }
 
     public String getTelcoName(){
