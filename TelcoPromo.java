@@ -14,7 +14,7 @@ public class TelcoPromo {
         System.out.println("Globe Data Usage Offer and price: " +
                 promo.showAllowance(globe.getTelcoName(), globe.getPromoPrice()));
 
-        System.out.println("Ditto Data Usage Offer and price: " +
+        System.out.println("Dito Data Usage Offer and price: " +
                 promo.showAllowance(dito.getTelcoName(), dito.getPromoPrice()));
 
         System.out.println("\nSmart unlimited calls and text package: " +
