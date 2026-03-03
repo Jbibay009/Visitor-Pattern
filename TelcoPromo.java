@@ -9,21 +9,21 @@ public class TelcoPromo {
         UnliCallsTextOffer unli = new UnliCallTextPackage();
 
         System.out.println("Smart Data Usage Offer and price: " +
-                promo.showAllowance(smart.getTelcoName(), smart.getPromoPrice()));
+                smart.accept(promo));
 
         System.out.println("Globe Data Usage Offer and price: " +
-                promo.showAllowance(globe.getTelcoName(), globe.getPromoPrice()));
+                globe.accept(promo));
 
         System.out.println("Dito Data Usage Offer and price: " +
-                promo.showAllowance(dito.getTelcoName(), dito.getPromoPrice()));
+                dito.accept(promo));
 
         System.out.println("\nSmart unlimited calls and text package: " +
-                unli.showUnliCallsTextOffer(smart.getTelcoName(), smart.getUnliCallText()));
+                smart.accept(unli));
 
         System.out.println("Globe unlimited calls and text package: " +
-                unli.showUnliCallsTextOffer(globe.getTelcoName(), globe.getUnliCallText()));
+                globe.accept(unli));
 
         System.out.println("Ditto unlimited calls and text package: " +
-                unli.showUnliCallsTextOffer(dito.getTelcoName(), dito.getUnliCallText()));
+                dito.accept(unli));
     }
 }

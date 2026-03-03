@@ -1,7 +1,10 @@
 public class UnliCallTextPackage implements UnliCallsTextOffer {
 
     @Override
-    public String showUnliCallsTextOffer(String telcoName, boolean unliCallText) {
+    public String showUnliCallsTextOffer(TelcoSubscription subscription) {
+        Telco telco = (Telco) subscription;
+        String telcoName = telco.getTelcoName();
+        boolean unliCallText = telco.getUnliCallText();
 
         if (!unliCallText) {
             return "Not offered, will be charged extra per usage.";
