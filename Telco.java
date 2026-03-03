@@ -23,22 +23,18 @@ public class Telco implements TelcoSubscription{
     }
 
     //getters
-    @Override
     public String getTelcoName(){
         return telcoName;
     }
 
-    @Override
     public double getPromoPrice(){
         return promoPrice;
     }
 
-    @Override
     public int getDataAllowance(){
         return dataAllowance;
     }
 
-    @Override
     public boolean getUnliCallText(){
         return unliCallText;
     }
