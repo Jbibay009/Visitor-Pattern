@@ -11,7 +11,7 @@ public class UnliCallTextPackage implements UnliCallsTextOffer {
             return "Not offered, will be charged extra per usage.";
         } 
         else if (telcoName.equalsIgnoreCase("Globe")) {
-            return "Offered for Globe Subscribers, calling and texting outside network will be charged per usage.";
+            return "Exclusively for Globe Network, calling and texting outside network will be charged per usage.";
         } 
         else if (telcoName.equalsIgnoreCase("Dito")) {
             return "Offered to all networks";
