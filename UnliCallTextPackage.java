@@ -4,7 +4,7 @@ public class UnliCallTextPackage implements UnliCallsTextOffer {
     public String showUnliCallsTextOffer(String telcoName, boolean unliCallText) {
 
         if (!unliCallText) {
-            return "Not offered";
+            return "Not offered, will be charged extra per usage.";
         }
 
         if (telcoName.equalsIgnoreCase("Smart")) {
