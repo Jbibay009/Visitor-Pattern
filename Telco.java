@@ -22,7 +22,6 @@ public class Telco implements TelcoSubscription{
         return offer.showUnliCallsTextOffer(this);
     }
 
-    //getters
     public String getTelcoName(){
         return telcoName;
     }
