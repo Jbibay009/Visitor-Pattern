@@ -1,22 +1,24 @@
+import java.util.HashMap;
+import java.util.Map;
+
 public class TelcoAllowance implements UsagePromo {
+    private static final Map<String, Integer> ALLOWANCE_MAP = new HashMap<>();
+
+    static {
+        ALLOWANCE_MAP.put("Smart", 15);
+        ALLOWANCE_MAP.put("Globe", 10);
+        ALLOWANCE_MAP.put("Dito", 8);
+    }
 
     @Override
     public String showAllowance(TelcoSubscription subscription) {
         Telco telco = (Telco) subscription;
-        int allowance;
         String telcoName = telco.getTelcoName();
         double promoPrice = telco.getPromoPrice();
 
-        if (telcoName.equalsIgnoreCase("Smart")) {
-            allowance = 15;
-        } 
-        else if (telcoName.equalsIgnoreCase("Globe")) {
-            allowance = 10;
-        } 
-        else if (telcoName.equalsIgnoreCase("Dito")) {
-            allowance = 8;
-        } 
-        else {
+        Integer allowance = ALLOWANCE_MAP.get(telcoName);
+
+        if (allowance == null) {
             return "Telco not supported.";
         }
 
